@@ -1,0 +1,6 @@
+{
+  "name": "Trip Planner - Smart Travel Planning",
+  "description": "Professional trip-planning application built with agentic architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
