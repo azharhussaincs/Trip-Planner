@@ -18,6 +18,7 @@ import { Card } from './ui/Card';
 import { Counter } from './ui/Counter';
 import { TripResult } from './TripResult';
 import { TripProgressIndicator } from './TripProgressIndicator';
+import { SourceCodeButton } from './SourceCodeButton';
 import {
   AccommodationType,
   TripFormData,
@@ -194,11 +195,12 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({ onBackToIntro }) => {
             </div>
           </div>
 
-          {/* Context badges */}
-          <div className="flex items-center gap-3">
+          {/* Context badges & actions */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline-block text-xs font-mono text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-              Assignment 2 — Task 2
+              Assignment 1 — Task 2
             </span>
+            <SourceCodeButton variant="nav" />
             <Button
               variant="outline"
               size="sm"
@@ -481,14 +483,15 @@ export const TripPlanner: React.FC<TripPlannerProps> = ({ onBackToIntro }) => {
           <div className="flex items-center gap-2">
             <span className="font-semibold text-slate-700">Trip Planner</span>
             <span aria-hidden="true">·</span>
-            <span>Assignment 2 — Task 2 · Subject: Agentic AI</span>
+            <span>Assignment 1 — Task 2 · Subject: Agentic AI</span>
           </div>
-          <div>
+          <div className="flex items-center gap-4">
+            <SourceCodeButton variant="minimal" />
             <button
               onClick={onBackToIntro}
               className="text-slate-600 hover:text-slate-900 hover:underline cursor-pointer"
             >
-              Developer Group: Azhar Hussain, Haris Javeed, Usman Kayani
+              Developer Group
             </button>
           </div>
         </div>

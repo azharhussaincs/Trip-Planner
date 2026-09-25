@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Compass, ArrowRight, Sparkles, Layers, Cpu, Database } from 'lucide-react';
 import { Button } from './ui/Button';
+import { SourceCodeButton } from './SourceCodeButton';
 
 interface IntroScreenProps {
   onPlanTrip: () => void;
@@ -54,8 +55,9 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onPlanTrip }) => {
             <span>Platform Engineering</span>
           </div>
 
-          {/* Zone 3: Primary Action */}
-          <div>
+          {/* Zone 3: Actions */}
+          <div className="flex items-center gap-2">
+            <SourceCodeButton variant="nav" />
             <Button
               variant="outline"
               size="sm"
@@ -116,11 +118,12 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onPlanTrip }) => {
             >
               Start Trip Planner
             </Button>
+            <SourceCodeButton variant="hero" className="w-full sm:w-auto" />
             <Button
               variant="outline"
               size="lg"
               onClick={onPlanTrip}
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-slate-700"
             >
               Plan My Trip
             </Button>
@@ -193,7 +196,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onPlanTrip }) => {
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-600">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="font-semibold text-slate-800">Assignment 2 — Task 2</span>
+              <span className="font-semibold text-slate-800">Assignment 1 — Task 2</span>
               <span aria-hidden="true" className="text-slate-300">·</span>
               <span>Subject: <strong className="font-medium text-slate-800">Agentic AI</strong></span>
               <span aria-hidden="true" className="text-slate-300">·</span>
@@ -210,13 +213,14 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onPlanTrip }) => {
 
       {/* Footer */}
       <footer className="border-t border-slate-200/80 bg-white py-4">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <span>Trip Planner</span>
             <span aria-hidden="true">·</span>
             <span>Smart Travel Planning</span>
           </div>
-          <div>
+          <div className="flex items-center gap-4">
+            <SourceCodeButton variant="minimal" />
             <span>Platform Engineering &copy; {new Date().getFullYear()}</span>
           </div>
         </div>

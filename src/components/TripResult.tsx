@@ -16,6 +16,7 @@ import {
 import { Button } from './ui/Button';
 import { DayPlan } from './DayPlan';
 import { TripProgressIndicator } from './TripProgressIndicator';
+import { SourceCodeButton } from './SourceCodeButton';
 import { GeneratedTripPlan } from '../services/itineraryService';
 
 interface TripResultProps {
@@ -99,6 +100,7 @@ export const TripResult: React.FC<TripResultProps> = ({
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
+            <SourceCodeButton variant="nav" />
             <Button
               variant="outline"
               size="sm"
@@ -293,8 +295,9 @@ export const TripResult: React.FC<TripResultProps> = ({
             <span aria-hidden="true">·</span>
             <span>Generated Plan for {plan.destination}</span>
           </div>
-          <div>
-            <span>Assignment 2 — Task 2 · Subject: Agentic AI · Instructor: Ms Afia</span>
+          <div className="flex items-center gap-4">
+            <SourceCodeButton variant="minimal" />
+            <span>Assignment 1 — Task 2 · Subject: Agentic AI · Instructor: Ms Afia</span>
           </div>
         </div>
       </footer>
